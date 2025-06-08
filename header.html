@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="container">
+        <a href="index.php" class="logo">FitLab</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li><a href="about.php">О нас</a></li>
+                <li><a href="programs.php">Программы</a></li>
+                <li><a href="trainers.php">Тренеры</a></li>
+                <li><a href="schedule.php">Расписание</a></li>
+                <li><a href="memberships.php">Абонементы</a></li>
+                <li><a href="contacts.php">Контакты</a></li>
+       
+                    <li><a href="profile.php">Профиль</a></li>
+                    <?php if ($auth->isAdmin()): ?>
+                        <li><a href="admin/">Админ</a></li>
+                    <?php endif; ?>
+                    <li><a href="logout.php">Выход</a></li>
+                <?php else: ?>
+                    <li><a href="login.php">Вход</a></li>
+                    <li><a href="register.php">Регистрация</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </div>
+</header>

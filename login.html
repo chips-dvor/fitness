@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - FitLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between align-center">
+            <a href="/" class="logo">FitLab</a>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.php">О нас</a></li>
+               <li><a href="memberships.html">Абонементы</a></li>
+                                   <li><a href="trainers.html">Тренеры</a></li>
+                                                                      <li><a href="programs.html">Программы</a></li>     
+                    <li><a href="schedule.php">Расписание</a></li>
+                    <li><a href="contacts.php">Контакты</a></li>
+                    <li><a href="login.php">Войти</a></li>
+                                        <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <div class="card">
+                        <h2 style="text-align: center; margin-bottom: 2rem;">Вход в систему</h2>
+                        
+                        <!-- Пример сообщения -->
+                        <!-- Чтобы отображать динамические сообщения, можно использовать JS -->
+                        <div id="message"></div>
+
+                        <form method="POST" action="#" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="username">Имя пользователя или Email</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Пароль</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+                        </form>
+                        
+                        <p style="text-align: center; margin-top: 1rem;">
+                            Нет аккаунта? <a href="register.html" style="color: var(--accent-blue);">Зарегистрироваться</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>FitLab</h4>
+                    <p>Создаем пространство для вашего развития и роста</p>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <p>ул. Фитнесная, д. 12, Москва<br>info@fitlab.ru<br>+7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4>Социальные сети</h4>
+                    <p>Instagram | Facebook | YouTube</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">© 2025 FitLab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript для имитации поведения формы -->
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const messageDiv = document.getElementById('message');
+            
+            if (!username || !password) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        Пожалуйста, заполните все поля
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        Вы успешно вошли! Перенаправление...
+                    </div>
+                `;
+                
+                // Имитация перенаправления
+                setTimeout(() => {
+                    window.location.href = 'profile.html';
+                }, 1500);
+            }
+        }
+    </script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

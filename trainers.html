@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши тренеры - FitLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between align-center">
+            <a href="/" class="logo">FitLab</a>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.php">О нас</a></li>
+               <li><a href="memberships.html">Абонементы</a></li>
+                                   <li><a href="trainers.html">Тренеры</a></li>
+                                                                      <li><a href="programs.html">Программы</a></li>     
+                    <li><a href="schedule.php">Расписание</a></li>
+                    <li><a href="contacts.php">Контакты</a></li>
+                    <li><a href="login.php">Войти</a></li>
+                                        <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой секция -->
+        <section class="hero" style="padding: 4rem 0;">
+            <div class="container">
+                <h1>Наши тренеры</h1>
+                <p>Команда профессионалов, которые помогут вам достичь ваших фитнес-целей</p>
+            </div>
+        </section>
+
+        <!-- Тренеры -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <!-- Пример тренера 1 -->
+                    <div class="card trainer-card">
+                        <div style="display: flex; gap: 2rem;">
+                            <div style="flex-shrink: 0;">
+                                <img src="/placeholder.svg?height=150&width=150" alt="Алексей Смирнов" 
+                                     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h3>Алексей Смирнов</h3>
+                                <p style="color: #E74C3C; font-weight: 500; margin-bottom: 1rem;">
+                                    Персональный тренер
+                                </p>
+                                <p style="margin-bottom: 1rem;">
+                                    <strong>Опыт:</strong> 7 лет
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    Алексей специализируется на силовых тренировках и подготовке к соревнованиям. Он имеет международные сертификаты и помог уже более чем 200 клиентам.
+                                </p>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <a href="mailto:aleksey@fitlab.ru" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Написать
+                                    </a>
+                                    <a href="tel:+79123456789" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Позвонить
+                                    </a>
+                                    <button class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;" onclick="showTrainerSchedule(1)">
+                                        Расписание
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пример тренера 2 -->
+                    <div class="card trainer-card">
+                        <div style="display: flex; gap: 2rem;">
+                            <div style="flex-shrink: 0;">
+                                <img src="/placeholder.svg?height=150&width=150" alt="Ольга Петрова" 
+                                     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h3>Ольга Петрова</h3>
+                                <p style="color: #E74C3C; font-weight: 500; margin-bottom: 1rem;">
+                                    Инструктор йоги
+                                </p>
+                                <p style="margin-bottom: 1rem;">
+                                    <strong>Опыт:</strong> 5 лет
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    Ольга — эксперт по йоге и пилатесу. Она проводит занятия для начинающих и опытных спортсменов. Её подход помогает расслабиться и сосредоточиться на теле.
+                                </p>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <a href="mailto:olga@fitlab.ru" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Написать
+                                    </a>
+                                    <a href="tel:+79123456789" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Позвонить
+                                    </a>
+                                    <button class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;" onclick="showTrainerSchedule(2)">
+                                        Расписание
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пример тренера 3 -->
+                    <div class="card trainer-card">
+                        <div style="display: flex; gap: 2rem;">
+                            <div style="flex-shrink: 0;">
+                                <img src="/placeholder.svg?height=150&width=150" alt="Дмитрий Кузнецов" 
+                                     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h3>Дмитрий Кузнецов</h3>
+                                <p style="color: #E74C3C; font-weight: 500; margin-bottom: 1rem;">
+                                    Тренер по CrossFit
+                                </p>
+                                <p style="margin-bottom: 1rem;">
+                                    <strong>Опыт:</strong> 6 лет
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    Дмитрий — чемпион по CrossFit и участник международных турниров. Его тренировки интенсивны и мотивируют достигать новых высот.
+                                </p>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <a href="mailto:dmitry@fitlab.ru" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Написать
+                                    </a>
+                                    <a href="tel:+79123456789" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Позвонить
+                                    </a>
+                                    <button class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;" onclick="showTrainerSchedule(3)">
+                                        Расписание
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пример тренера 4 -->
+                    <div class="card trainer-card">
+                        <div style="display: flex; gap: 2rem;">
+                            <div style="flex-shrink: 0;">
+                                <img src="/placeholder.svg?height=150&width=150" alt="Екатерина Иванова" 
+                                     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h3>Екатерина Иванова</h3>
+                                <p style="color: #E74C3C; font-weight: 500; margin-bottom: 1rem;">
+                                    Инструктор пилатеса
+                                </p>
+                                <p style="margin-bottom: 1rem;">
+                                    <strong>Опыт:</strong> 8 лет
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    Екатерина обучалась в лучших школах пилатеса в Европе. Она помогает людям улучшить осанку, баланс и гибкость.
+                                </p>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <a href="mailto:katerina@fitlab.ru" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Написать
+                                    </a>
+                                    <a href="tel:+79123456789" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                        Позвонить
+                                    </a>
+                                    <button class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;" onclick="showTrainerSchedule(4)">
+                                        Расписание
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как работают наши тренеры -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Как работают наши тренеры</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Индивидуальный подход</h3>
+                        <p>Каждый тренер разрабатывает персональную программу, учитывая ваши цели, уровень подготовки и особенности здоровья.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Постоянное развитие</h3>
+                        <p>Наши тренеры регулярно проходят курсы повышения квалификации и изучают новые методики тренировок.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Мотивация и поддержка</h3>
+                        <p>Тренеры не только показывают упражнения, но и мотивируют, поддерживают и помогают преодолевать трудности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сертификации и достижения -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Сертификации и достижения</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3>Профессиональные сертификаты</h3>
+                        <ul style="list-style-type: disc; margin-left: 2rem;">
+                            <li>Международные сертификаты ACSM, NASM</li>
+                            <li>Сертификаты по специализированным программам</li>
+                            <li>Медицинские допуски к работе</li>
+                            <li>Сертификаты по оказанию первой помощи</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Спортивные достижения</h3>
+                        <ul style="list-style-type: disc; margin-left: 2rem;">
+                            <li>Мастера спорта и кандидаты в мастера спорта</li>
+                            <li>Призеры региональных и всероссийских соревнований</li>
+                            <li>Участники международных турниров</li>
+                            <li>Опыт подготовки спортсменов высокого уровня</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Персональные тренировки -->
+        <section class="section" style="background: linear-gradient(135deg, #2980B9, #E74C3C); color: white;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white;">Персональные тренировки</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Хотите максимально эффективные тренировки? Закажите персональную тренировку с одним из наших тренеров!
+                </p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: white;">Разовая тренировка</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: white;">2500 ₽</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: white;">Пакет 5 тренировок</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: white;">11000 ₽</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: white;">Пакет 10 тренировок</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: white;">20000 ₽</p>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="contacts.html" class="btn btn-primary">Записаться на персональную тренировку</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>FitLab</h4>
+                    <p>Создаем пространство для вашего развития и роста</p>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <p>ул. Фитнесная, д. 12, Москва<br>info@fitlab.ru<br>+7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4>Социальные сети</h4>
+                    <p>Instagram | Facebook | YouTube</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">© 2025 FitLab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно расписания тренера -->
+    <div id="trainerScheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideTrainerSchedule()">&times;</span>
+            <h3>Расписание тренера</h3>
+            <div id="trainerScheduleContent">
+                <p>Пример расписания:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">📅 Вторник, 19:00 - 20:00</li>
+                    <li style="margin-bottom: 0.5rem;">📅 Четверг, 18:00 - 19:00</li>
+                    <li style="margin-bottom: 0.5rem;">📅 Суббота, 10:00 - 11:00</li>
+                </ul>
+                <button onclick="bookTrainer()" class="btn btn-primary" style="width: 100%;">Записаться</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function showTrainerSchedule(trainerId) {
+            document.getElementById('trainerScheduleModal').style.display = 'block';
+        }
+
+        function hideTrainerSchedule() {
+            document.getElementById('trainerScheduleModal').style.display = 'none';
+        }
+
+        function bookTrainer() {
+            alert('Вы успешно записались на тренировку!');
+            hideTrainerSchedule();
+        }
+    </script>
+    <style>
+        .trainer-card {
+            transition: transform 0.3s ease;
+        }
+        .trainer-card:hover {
+            transform: translateY(-5px);
+        }
+        @media (max-width: 768px) {
+            .trainer-card > div {
+                flex-direction: column;
+                text-align: center;
+            }
+            .trainer-card img {
+                margin: 0 auto 1rem auto;
+            }
+        }
+    </style>
+</body>
+</html>

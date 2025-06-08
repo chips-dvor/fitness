@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программы тренировок - FitLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between align-center">
+            <a href="/" class="logo">FitLab</a>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.php">О нас</a></li>
+               <li><a href="memberships.html">Абонементы</a></li>
+                                   <li><a href="trainers.html">Тренеры</a></li>
+                                                                      <li><a href="programs.html">Программы</a></li>     
+                    <li><a href="schedule.php">Расписание</a></li>
+                    <li><a href="contacts.php">Контакты</a></li>
+                    <li><a href="login.php">Войти</a></li>
+                                        <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой секция -->
+        <section class="hero" style="padding: 4rem 0;">
+            <div class="container">
+                <h1>Программы тренировок</h1>
+                <p>Разнообразные программы для достижения ваших фитнес-целей под руководством профессиональных тренеров</p>
+            </div>
+        </section>
+
+        <!-- Программы по уровням -->
+        <section class="section" id="beginner">
+            <div class="container">
+                <h2 class="section-title">Для начинающих</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>Базовая тренировка</h3>
+                            <span class="badge badge-beginner" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Для начинающих
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Идеально подходит для новичков. Основы правильной техники и базовые упражнения.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 60 мин</span>
+                                <span><strong>Макс. участников:</strong> 15</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Алексей Смирнов
+                                <br><small style="color: #666;">Персональный тренер</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>Йога для новичков</h3>
+                            <span class="badge badge-beginner" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Для начинающих
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Мягкая тренировка для развития гибкости и баланса. Подходит для всех возрастов.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 90 мин</span>
+                                <span><strong>Макс. участников:</strong> 12</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Ольга Петрова
+                                <br><small style="color: #666;">Специалист по йоге</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="intermediate">
+            <div class="container">
+                <h2 class="section-title">Средний уровень</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>HIIT тренировка</h3>
+                            <span class="badge badge-intermediate" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Средний уровень
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Высокоинтенсивная интервальная тренировка для повышения выносливости и жиросжигания.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 60 мин</span>
+                                <span><strong>Макс. участников:</strong> 10</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Иван Иванов
+                                <br><small style="color: #666;">Специалист по HIIT</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>Пилатес</h3>
+                            <span class="badge badge-intermediate" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Средний уровень
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Комплекс упражнений для развития силы, контроля и координации.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 75 мин</span>
+                                <span><strong>Макс. участников:</strong> 10</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Мария Сидорова
+                                <br><small style="color: #666;">Инструктор пилатеса</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="advanced">
+            <div class="container">
+                <h2 class="section-title">Продвинутый уровень</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>CrossFit</h3>
+                            <span class="badge badge-advanced" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Продвинутый уровень
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Интенсивные функциональные тренировки для опытных спортсменов.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 90 мин</span>
+                                <span><strong>Макс. участников:</strong> 8</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Дмитрий Кузнецов
+                                <br><small style="color: #666;">Чемпион по CrossFit</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h3>Функциональный тренинг</h3>
+                            <span class="badge badge-advanced" style="padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                Продвинутый уровень
+                            </span>
+                        </div>
+                        <p style="margin-bottom: 1rem;">Тренировки с акцентом на функциональную подготовку и силу.</p>
+                        <div class="program-details" style="margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 0.5rem;">
+                                <span><strong>Длительность:</strong> 90 мин</span>
+                                <span><strong>Макс. участников:</strong> 8</span>
+                            </div>
+                            <div>
+                                <strong>Тренер:</strong> Николай Андреев
+                                <br><small style="color: #666;">Функциональный тренер</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="schedule.html" class="btn btn-primary">Расписание</a>
+                            <a href="login.html" class="btn btn-secondary">Войти для записи</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как выбрать программу -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Как выбрать программу</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Для начинающих</h3>
+                        <p>Если вы новичок в фитнесе или возвращаетесь после длительного перерыва, начните с программ для начинающих. Они помогут освоить правильную технику и постепенно увеличить нагрузку.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Средний уровень</h3>
+                        <p>Для тех, кто уже имеет базовую физическую подготовку и хочет повысить интенсивность тренировок. Программы включают более сложные упражнения и комбинации.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Продвинутый уровень</h3>
+                        <p>Высокоинтенсивные программы для опытных спортсменов. Требуют хорошей физической подготовки и знания техники выполнения упражнений.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Специальные предложения -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Специальные предложения</h2>
+                <div class="grid grid-2">
+                    <div class="card" style="background: linear-gradient(135deg, #E74C3C, #C0392B); color: white;">
+                        <h3 style="color: white;">Первая тренировка бесплатно!</h3>
+                        <p>Новые клиенты могут посетить любую групповую тренировку абсолютно бесплатно. Это отличная возможность познакомиться с нашими программами и тренерами.</p>
+                        <a href="register.html" class="btn btn-secondary">Зарегистрироваться</a>
+                    </div>
+                    <div class="card" style="background: linear-gradient(135deg, #2980B9, #1F5F8B); color: white;">
+                        <h3 style="color: white;">Персональные тренировки</h3>
+                        <p>Индивидуальные занятия с тренером для максимально эффективного достижения ваших целей. Программа составляется персонально для вас.</p>
+                        <a href="contacts.html" class="btn btn-primary">Узнать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>FitLab</h4>
+                    <p>Создаем пространство для вашего развития и роста</p>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <p>ул. Фитнесная, д. 12, Москва<br>info@fitlab.ru<br>+7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4>Социальные сети</h4>
+                    <p>Instagram | Facebook | YouTube</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">© 2025 FitLab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно записи -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Запись на тренировку</h3>
+            <div id="modalContent">
+                <p>Выберите удобное время для тренировки:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><input type="radio" name="time"> 19:00 - 20:00</li>
+                    <li style="margin-bottom: 0.5rem;"><input type="radio" name="time"> 20:00 - 21:00</li>
+                    <li style="margin-bottom: 0.5rem;"><input type="radio" name="time"> 21:00 - 22:00</li>
+                </ul>
+                <button onclick="bookTraining()" class="btn btn-primary" style="width: 100%;">Записаться</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function bookTraining() {
+            alert('Вы успешно записались на тренировку!');
+        }
+
+        document.querySelector('.close')?.addEventListener('click', () => {
+            document.getElementById('bookingModal').style.display = 'none';
+        });
+    </script>
+    <style>
+        .badge-beginner { background-color: #27ae60; color: white; }
+        .badge-intermediate { background-color: #f39c12; color: white; }
+        .badge-advanced { background-color: #e74c3c; color: white; }
+    </style>
+</body>
+</html>

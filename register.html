@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - FitLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between align-center">
+            <a href="/" class="logo">FitLab</a>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.php">О нас</a></li>
+               <li><a href="memberships.html">Абонементы</a></li>
+                                   <li><a href="trainers.html">Тренеры</a></li>
+                                                                      <li><a href="programs.html">Программы</a></li>     
+                    <li><a href="schedule.php">Расписание</a></li>
+                    <li><a href="contacts.php">Контакты</a></li>
+                    <li><a href="login.php">Войти</a></li>
+                                        <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <div class="card">
+                        <h2 style="text-align: center; margin-bottom: 2rem;">Регистрация</h2>
+
+                        <!-- Пример сообщения -->
+                        <div id="message"></div>
+
+                        <form method="POST" action="#" onsubmit="handleRegister(event)">
+                            <div class="form-group">
+                                <label for="username">Имя пользователя *</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="first_name">Имя *</label>
+                                <input type="text" id="first_name" name="first_name" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last_name">Фамилия *</label>
+                                <input type="text" id="last_name" name="last_name" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Пароль *</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm_password">Подтвердите пароль *</label>
+                                <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Зарегистрироваться</button>
+                        </form>
+
+                        <p style="text-align: center; margin-top: 1rem;">
+                            Уже есть аккаунт? <a href="login.html" style="color: var(--accent-blue);">Войти</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>FitLab</h4>
+                    <p>Создаем пространство для вашего развития и роста</p>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <p>ул. Фитнесная, д. 12, Москва<br>info@fitlab.ru<br>+7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4>Социальные сети</h4>
+                    <p>Instagram | Facebook | YouTube</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">© 2025 FitLab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const firstName = document.getElementById('first_name').value.trim();
+            const lastName = document.getElementById('last_name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const messageDiv = document.getElementById('message');
+
+            // Валидация формы
+            if (!username || !email || !password || !firstName || !lastName) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        Пожалуйста, заполните все обязательные поля
+                    </div>
+                `;
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        Пароли не совпадают
+                    </div>
+                `;
+                return;
+            }
+
+            if (password.length < 6) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        Пароль должен содержать минимум 6 символов
+                    </div>
+                `;
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        Некорректный email адрес
+                    </div>
+                `;
+                return;
+            }
+
+            // Если всё ок
+            messageDiv.innerHTML = `
+                <div class="alert alert-success">
+                    Регистрация прошла успешно! Перенаправление...
+                </div>
+            `;
+
+            // Имитация перенаправления
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1500);
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание - FitLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between align-center">
+            <a href="/" class="logo">FitLab</a>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.php">О нас</a></li>
+               <li><a href="memberships.html">Абонементы</a></li>
+                                   <li><a href="trainers.html">Тренеры</a></li>
+                                                                      <li><a href="programs.html">Программы</a></li>     
+                    <li><a href="schedule.php">Расписание</a></li>
+                    <li><a href="contacts.php">Контакты</a></li>
+                    <li><a href="login.php">Войти</a></li>
+                                        <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой секция -->
+        <section class="hero" style="padding: 4rem 0;">
+            <div class="container">
+                <h1>Расписание тренировок</h1>
+                <p>Выберите удобное время для тренировок и записывайтесь онлайн</p>
+            </div>
+        </section>
+
+        <!-- Фильтры -->
+        <section class="section" style="padding: 2rem 0; background-color: #f8f9fa;">
+            <div class="container">
+                <div class="card">
+                    <h3>Фильтры</h3>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                        <div>
+                            <label for="programFilter">Программа:</label>
+                            <select id="programFilter" class="form-control" style="width: auto; display: inline-block; margin-left: 0.5rem;">
+                                <option value="">Все программы</option>
+                                <option value="HIIT">HIIT</option>
+                                <option value="Йога">Йога</option>
+                                <option value="Пилатес">Пилатес</option>
+                                <option value="CrossFit">CrossFit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="trainerFilter">Тренер:</label>
+                            <select id="trainerFilter" class="form-control" style="width: auto; display: inline-block; margin-left: 0.5rem;">
+                                <option value="">Все тренеры</option>
+                                <option value="Алексей Смирнов">Алексей Смирнов</option>
+                                <option value="Ольга Петрова">Ольга Петрова</option>
+                                <option value="Дмитрий Кузнецов">Дмитрий Кузнецов</option>
+                                <option value="Екатерина Иванова">Екатерина Иванова</option>
+                            </select>
+                        </div>
+                        <button onclick="clearFilters()" class="btn btn-secondary">Сбросить фильтры</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Расписание по дням -->
+        <section class="section">
+            <div class="container">
+                <!-- Понедельник -->
+                <div class="day-schedule" style="margin-bottom: 3rem;">
+                    <h2 style="color: #2980B9; border-bottom: 2px solid #2980B9; padding-bottom: 0.5rem;">
+                        Понедельник, 22.04.2025
+                    </h2>
+                    <div class="grid grid-2" style="margin-top: 1.5rem;">
+                        <div class="card session-card" data-program="HIIT" data-trainer="Алексей Смирнов">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin-bottom: 0.5rem;">HIIT</h3>
+                                    <p style="color: #E74C3C; font-weight: 500; margin: 0;">
+                                        19:00 (60 мин)
+                                    </p>
+                                </div>
+                                <span class="badge badge-intermediate" style="background-color: #f39c12; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                    Средний
+                                </span>
+                            </div>
+                            <p style="margin-bottom: 1rem;">
+                                <strong>Тренер:</strong> Алексей Смирнов
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="color: #27ae60; font-weight: 500;">
+                                        Свободно мест: 5
+                                    </span>
+                                </div>
+                                <small style="color: #666;">
+                                    Макс: 10 чел.
+                                </small>
+                            </div>
+                            <div>
+                                <a href="login.html" class="btn btn-primary">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="card session-card" data-program="Йога" data-trainer="Ольга Петрова">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin-bottom: 0.5rem;">Йога</h3>
+                                    <p style="color: #E74C3C; font-weight: 500; margin: 0;">
+                                        20:00 (90 мин)
+                                    </p>
+                                </div>
+                                <span class="badge badge-beginner" style="background-color: #27ae60; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                    Начинающий
+                                </span>
+                            </div>
+                            <p style="margin-bottom: 1rem;">
+                                <strong>Тренер:</strong> Ольга Петрова
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="color: #27ae60; font-weight: 500;">
+                                        Свободно мест: 8
+                                    </span>
+                                </div>
+                                <small style="color: #666;">
+                                    Макс: 12 чел.
+                                </small>
+                            </div>
+                            <div>
+                                <a href="login.html" class="btn btn-primary">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вторник -->
+                <div class="day-schedule" style="margin-bottom: 3rem;">
+                    <h2 style="color: #2980B9; border-bottom: 2px solid #2980B9; padding-bottom: 0.5rem;">
+                        Вторник, 23.04.2025
+                    </h2>
+                    <div class="grid grid-2" style="margin-top: 1.5rem;">
+                        <div class="card session-card" data-program="Пилатес" data-trainer="Екатерина Иванова">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin-bottom: 0.5rem;">Пилатес</h3>
+                                    <p style="color: #E74C3C; font-weight: 500; margin: 0;">
+                                        18:00 (75 мин)
+                                    </p>
+                                </div>
+                                <span class="badge badge-intermediate" style="background-color: #f39c12; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                    Средний
+                                </span>
+                            </div>
+                            <p style="margin-bottom: 1rem;">
+                                <strong>Тренер:</strong> Екатерина Иванова
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="color: #e74c3c; font-weight: 500;">
+                                        Мест нет
+                                    </span>
+                                </div>
+                                <small style="color: #666;">
+                                    Макс: 10 чел.
+                                </small>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary" disabled>Мест нет</button>
+                            </div>
+                        </div>
+
+                        <div class="card session-card" data-program="HIIT" data-trainer="Алексей Смирнов">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin-bottom: 0.5rem;">HIIT</h3>
+                                    <p style="color: #E74C3C; font-weight: 500; margin: 0;">
+                                        20:00 (60 мин)
+                                    </p>
+                                </div>
+                                <span class="badge badge-intermediate" style="background-color: #f39c12; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                                    Средний
+                                </span>
+                            </div>
+                            <p style="margin-bottom: 1rem;">
+                                <strong>Тренер:</strong> Алексей Смирнов
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="color: #27ae60; font-weight: 500;">
+                                        Свободно мест: 3
+                                    </span>
+                                </div>
+                                <small style="color: #666;">
+                                    Макс: 10 чел.
+                                </small>
+                            </div>
+                            <div>
+                                <a href="login.html" class="btn btn-primary">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Среда -->
+                <div class="day-schedule" style="margin-bottom: 3rem;">
+                    <h2 style="color: #2980B9; border-bottom: 2px solid #2980B9; padding-bottom: 0.5rem;">
+                        Среда, 24.04.2025
+                    </h2>
+                    <p style="color: #666; font-style: italic; margin: 2rem 0;">На этот день тренировки не запланированы</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Информация о записи -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Правила записи</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3>Как записаться</h3>
+                        <ul style="list-style-type: disc; margin-left: 2rem;">
+                            <li>Зарегистрируйтесь на сайте или войдите в личный кабинет</li>
+                            <li>Выберите подходящую тренировку в расписании</li>
+                            <li>Нажмите кнопку "Записаться"</li>
+                            <li>Подтвердите запись</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Важная информация</h3>
+                        <ul style="list-style-type: disc; margin-left: 2rem;">
+                            <li>Отменить запись можно за 2 часа до начала</li>
+                            <li>Приходите за 10-15 минут до начала тренировки</li>
+                            <li>При опоздании более чем на 10 минут вход на тренировку не разрешается</li>
+                            <li>Обязательно имейте при себе полотенце и воду</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>FitLab</h4>
+                    <p>Создаем пространство для вашего развития и роста</p>
+                </div>
+                <div>
+                    <h4>Контакты</h4>
+                    <p>ул. Фитнесная, д. 12, Москва<br>info@fitlab.ru<br>+7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4>Социальные сети</h4>
+                    <p>Instagram | Facebook | YouTube</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">© 2025 FitLab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function clearFilters() {
+            document.getElementById('programFilter').value = '';
+            document.getElementById('trainerFilter').value = '';
+            filterSchedule();
+        }
+
+        function filterSchedule() {
+            const programFilter = document.getElementById('programFilter').value.toLowerCase();
+            const trainerFilter = document.getElementById('trainerFilter').value.toLowerCase();
+            const sessionCards = document.querySelectorAll('.session-card');
+            sessionCards.forEach(card => {
+                const program = card.getAttribute('data-program').toLowerCase();
+                const trainer = card.getAttribute('data-trainer').toLowerCase();
+                const showProgram = !programFilter || program.includes(programFilter);
+                const showTrainer = !trainerFilter || trainer.includes(trainerFilter);
+                if (showProgram && showTrainer) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Скрываем дни без отфильтрованных тренировок
+            document.querySelectorAll('.day-schedule').forEach(day => {
+                const visibleSessions = day.querySelectorAll('.session-card[style*="block"]');
+                if (visibleSessions.length === 0) {
+                    day.style.display = 'none';
+                } else {
+                    day.style.display = 'block';
+                }
+            });
+        }
+
+        document.getElementById('programFilter').addEventListener('change', filterSchedule);
+        document.getElementById('trainerFilter').addEventListener('change', filterSchedule);
+    </script>
+    <style>
+        .badge-beginner { background-color: #27ae60; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
+        .badge-intermediate { background-color: #f39c12; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
+        .badge-advanced { background-color: #e74c3c; color: white; padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
+        .session-card {
+            border-left: 4px solid #2980B9;
+            transition: all 0.3s ease;
+        }
+        .session-card:hover {
+            border-left-color: #E74C3C;
+            transform: translateY(-2px);
+        }
+    </style>
+</body>
+</html>
